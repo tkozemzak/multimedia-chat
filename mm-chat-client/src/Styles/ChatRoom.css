@@ -1,0 +1,13 @@
+.ChatRoom {
+  display: flex;
+}
+
+.message-container {
+  width: 40%;
+  border: 2px solid red;
+}
+
+.event-container {
+  width: 40%;
+  border: 2px solid black;
+}
