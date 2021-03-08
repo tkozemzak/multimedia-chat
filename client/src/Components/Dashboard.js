@@ -1,9 +1,10 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 const Dashboard = ({ id }) => {
   return (
     <div>
-      <h1>{id}</h1>
+      <Sidebar id={id} />
     </div>
   );
 };
