@@ -1,13 +1,13 @@
 import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
 import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
-  const [id, setID] = useLocalStorage();
+  const [id, setID] = useLocalStorage("id");
 
   return (
     <div className="App">
-      {id}
-      <Login onIDSubmit={setID} />
+      {id ? <Dashboard id={id} /> : <Login onIDSubmit={setID} />}
     </div>
   );
 }

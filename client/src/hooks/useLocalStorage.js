@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PREFIX = "whatsapp";
+const PREFIX = "whatsapp-";
 
 const useLocalStorage = (key, initialValue) => {
   const prefixedKey = PREFIX + key;
