@@ -1,10 +1,24 @@
 import React from "react";
+import { ListGroup } from "react-bootstrap";
+import { useConversations } from "../contexts/ConversationsProvider";
 
 const Conversations = () => {
+  const { conversations } = useConversations();
+
   return (
-    <div>
-      <h1>Conversations</h1>
-    </div>
+    <ListGroup variant="flush">
+      {conversations.map((conversation, idx) => {
+        return (
+          <ListGroup.Item key={idx}>
+            {conversation.recipients
+              .map((recipient) => {
+                return recipient.name;
+              })
+              .join(", ")}
+          </ListGroup.Item>
+        );
+      })}
+    </ListGroup>
   );
 };
 
